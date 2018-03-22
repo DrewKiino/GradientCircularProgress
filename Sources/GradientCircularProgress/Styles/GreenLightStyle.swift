@@ -8,6 +8,9 @@
 
 
 public struct GreenLightStyle: StyleProperty {
+  
+    public var arcLineCapStyle: CGLineCap = .butt
+  
     // Progress Size
     public var progressSize: CGFloat = 200
     

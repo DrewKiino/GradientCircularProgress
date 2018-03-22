@@ -8,6 +8,9 @@
 
 
 public struct BlueDarkStyle: StyleProperty {
+  
+    public var arcLineCapStyle: CGLineCap = .butt
+  
     // Progress Size
     public var progressSize: CGFloat = 260
     
