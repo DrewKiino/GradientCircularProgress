@@ -7,6 +7,9 @@
 //
 
 public protocol StyleProperty {
+  
+    var arcLineCapStyle: CGLineCap { get set }
+  
     // Progress Size
     var progressSize: CGFloat { get set }
     
@@ -48,7 +51,7 @@ public enum BackgroundStyles: Int {
 
 internal struct Property {
     let margin: CGFloat = 5.0
-    let arcLineCapStyle: CGLineCap = CGLineCap.butt
+    var arcLineCapStyle: CGLineCap = CGLineCap.butt
     
     // Progress Size
     var progressSize: CGFloat
@@ -85,7 +88,8 @@ internal struct Property {
     init(style: StyleProperty) {
         
         let styles: StyleProperty = style
-        
+      
+        arcLineCapStyle       = styles.arcLineCapStyle
         progressSize          = styles.progressSize
         arcLineWidth          = styles.arcLineWidth
         startArcColor         = styles.startArcColor
